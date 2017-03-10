@@ -1,0 +1,121 @@
+include includes/header.pug
+
+// START page title section
+.page-title
+  .container
+    .row
+      .col-md-7.col-xs-12
+        h1
+          | 가평 북면
+          span.theme-color 펜션협회
+        img.heading-border(src='/images/branding-border.png', alt='')
+        //
+          <p>노쇼나 중복예약의 걱정이 없는 정확한 재고관리, 간편하고 빠른 실시간 온라인 예약,
+          지금 숙박예약관리솔루션 ‘자리’를 통해 경험해보세요!</p>
+        p
+          | 가평군 북명 숙박업을 하시는 분은 간단한 확인절차를 통하여 협회 회원등록을 하실 수 있습니다. 협회로 전화 또는 방문, 인터넷으로 가입가능하여 현재 협회 가입비 및 월회비는 무료입니다.
+
+.container
+
+  // <h3 class="mb-20">숙소찾기</h3>
+  form.atom-form
+    .row
+      .col-sm-5
+        input(name='name', placeholder='펜션 이름으로 검색하기', type='text')
+      .col-sm-2
+        button.btn.btn-theme.btn-sm(type='submit') 검색하기
+        // <textarea placeholder="Comment"></textarea>
+
+  // work filter
+  .row
+    .col-md-12
+      ul.atom-portfolio-filter.text-left.list-inline
+        li
+          a.active(href='#', data-filter='*') 전체
+        li
+          a(href='#', data-filter='.jeju') 스파펜션
+        li
+          a(href='#', data-filter='.gapyeong') 워크샵/MT펜션
+        li
+          a(href='#', data-filter='.anmyeondo') 풀빌라펜션
+        li
+          a(href='#', data-filter='.tongyoeng') 가족/연인펜션
+        li
+          a(href='#', data-filter='.yangyang') 황토/온톨펜션
+
+// work grid
+#atom-works-grid.work-grids-area.hover-one.no-gutter
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.tongyoeng
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/7.jpg', alt='')
+      .desc.text-center
+        h5 해간도 펜션
+        p 경상남도 통영시
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.jeju
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/1.jpg', alt='')
+      .desc.text-center
+        h5 표선 솔로게스트하우스
+        p 제주특별자치도 서귀포시
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.gapyeong
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/3.jpg', alt='')
+      .desc.text-center
+        h5 멀리가는향기 펜션
+        p 경기도 가평군
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.anmyeondo
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/6.jpg', alt='')
+      .desc.text-center
+        h5 바다풍경 펜션
+        p 충남 태안군 안면읍
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.jeju
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/2.jpg', alt='')
+      .desc.text-center
+        h5 쿨쿨하우스 게스트하우스
+        p 제주특별자치도 서귀포시
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.gapyeong
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/4.jpg', alt='')
+      .desc.text-center
+        h5 또올레 펜션
+        p 경기도 가평군
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.anmyeondo
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/5.jpg', alt='')
+      .desc.text-center
+        h5 안면 펜션
+        p 충남 태안군 안면읍
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.tongyoeng
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/8.jpg', alt='')
+      .desc.text-center
+        h5 나폴리 펜션
+        p 경상남도 통영시
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.yangyang
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/9.jpg', alt='')
+      .desc.text-center
+        h5 해맞이길 콘도
+        p 강원도 양양군
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.gapyeong
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/11.jpg', alt='')
+      .desc.text-center
+        h5 미소 펜션
+        p 경기도 가평군
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.jeju
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/12.jpg', alt='')
+      .desc.text-center
+        h5 그린피치 게스트하우스
+        p 제주특별자치도 서귀포시
+  .col-md-3.col-sm-4.col-xs-12.atom-work-item.yangyang
+    a(href='view.php')
+      img.img-responsive(src='/images/portfolio/grid/10.jpg', alt='')
+      .desc.text-center
+        h5 설악황토하우스 펜션
+        p 강원도 양양군
+
+include includes/footer.pug
