@@ -14,7 +14,7 @@
 
   .menu-wrapper header .logo {
     position: absolute;
-    top: 30px;
+    top: -42px;
     left: 15px;
     line-height: 0; }
     .menu-wrapper header .logo img {
@@ -71,5 +71,3 @@
     flex: 100px; } }
 /* Landscape phones and smaller */
 /* portrait phones */
-
-/*# sourceMappingURL=responsive.css.map */

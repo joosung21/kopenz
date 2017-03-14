@@ -31,6 +31,9 @@ app.get('/channel', function (req, res) {
 app.get('/map', function (req, res) {
   res.render('map')
 })
+app.get('/contact', function (req, res) {
+  res.render('contact')
+})
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
