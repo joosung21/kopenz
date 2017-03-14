@@ -35,6 +35,6 @@ app.get('/contact', function (req, res) {
   res.render('contact')
 })
 
-app.listen(8000, function () {
-  console.log('Example app listening on port 8000!')
+app.listen(3000, function () {
+  console.log('Example app listening on port 3000!')
 })
