@@ -1,0 +1,132 @@
+include includes/header.pug
+
+.menu-wrapper
+  .container
+    header
+      .logo
+        a(href='/')
+          img(src='/images/logo.png', alt='')
+      .mobile-menu
+        span.line
+      nav
+        ul
+          li
+            a(href='/') HOME
+          li
+            a(href='/member') 회원사
+          li.active
+            a(href='/map') 전국펜션지도
+          li
+            a(href='/channel') 제휴체널
+          li
+            a(href='/contact') CONTACT US
+
+div#map
+
+style.
+  .menu-wrapper{
+    margin-top:-54px;
+  }
+  .menu-wrapper header .logo img {
+    max-width: 50%;
+  }
+  .menu-wrapper header {
+    height: 189px;
+  }
+
+include includes/footer.pug
+
+script(type='text/javascript').
+  function initMap() {
+      //- Create new Google Map
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: {lat: 33.383886, lng: 126.542081}, //제주도
+        mapTypeControl: false,
+        draggable: true,
+        //draggable: !("ontouchend" in document),
+        panControl: true,
+        scaleControl: true
+      });
+
+      // get Json Data
+      var hosts = [];
+      $.ajax({
+        url: '/js/test2.json',
+        async: false,
+        dataType: 'json',
+        success: function (json) {
+          hosts = json;
+        }
+      });
+
+      // marker icon image
+      var icon = "images/pin3.png";
+
+      //Add some markers to the map.
+      var markers = hosts.map(function(host, i) {
+          var myLatlng = new google.maps.LatLng(host.lat,host.lng);
+          var marker = new google.maps.Marker({
+              position: myLatlng,
+              title: host.title,
+              map: map,
+              icon: icon
+          });
+          infoWindow(marker, map, host.title, host.address, host.phone)
+          return marker;
+      });
+
+
+      // Set a marker clusterer style.
+      var clusterStyles = [
+        {
+          textColor: 'white',
+          textSize: 22,
+          url: 'images/cluster.png',
+          height: 70,
+          width: 70
+        }
+      ];
+
+      var mcOptions = {
+          gridSize: 45,
+          styles: clusterStyles,
+          maxZoom: 13
+      };
+
+      // Add a marker clusterer to manage the markers.
+      var markerCluster = new MarkerClusterer(map, markers, mcOptions);
+
+
+      // global infowindow
+      google.maps.event.addDomListener(window, "load", initMap);
+
+      var iw = new google.maps.InfoWindow({
+        maxWidth: 350
+      });
+
+      function infoWindow(marker, map, title, address, phone) {
+        google.maps.event.addListener(marker, 'click', function() {
+          var html = "<div class='infowindow'><h3>" + title + "</h3><p>" + address + "<br/>TEL: " + phone + "</p></div>";
+          // set the content (saved in html variable using function closure)
+          iw.setContent(html);
+          // open the infowindow on the marker.
+          iw.open(map, marker);
+        });
+      }
+
+      // Fit bound
+      var bounds = new google.maps.LatLngBounds();
+
+      for (var i=0; i<markers.length; i++) {
+          if(markers[i].getVisible()) {
+              bounds.extend( markers[i].getPosition() );
+          }
+      }
+
+      map.fitBounds(bounds);
+
+  }
+
+script(type='text/javascript', src='/js/clusterer.js')
+script(async='', defer='', src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAYAR9ha33tDQfl81KCVoePD_w3KcAaWGo&callback=initMap')

@@ -1,0 +1,63 @@
+include includes/header.pug
+
+.menu-wrapper
+  .container
+    header
+      .logo
+        a(href='/')
+          img(src='/images/logo.png', alt='')
+      .mobile-menu
+        span.line
+      nav
+        ul
+          li
+            a(href='/') HOME
+          li.active
+            a(href='/member') 회원사
+          li
+            a(href='/map') 전국펜션지도
+          li
+            a(href='/channel') 제휴체널
+          li
+            a(href='/contact') CONTACT US
+
+//- page title section
+.page-title
+  .container
+    .row
+      .col-md-7.col-xs-12
+        h1
+          | Kopenz
+          span.theme-color   Members
+        img.heading-border(src='/images/branding-border.png', alt='')
+        p
+          | KOPENZ 회원사들 입니다.
+
+.container
+  ul.grid.grid-4-columns
+    li
+      a(href='http://www.ibuan.co.kr/', target='_blank', data-content='변산반도 여행정보 포털사이트를 운영하고 있으며, 펜션,민박,음식점 등의 홈페이지를 제작합니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='변산반도닷컴', data-trigger='hover')
+        img(src='images/member_logo1.png', alt='')
+    li
+      a(href='http://www.pensionworld.net/', target='_blank', data-content='안면도권(충남) 펜션예약사이트를 운영하고 있습니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='펜션월드', data-trigger='hover')
+        img(src='images/member_logo2.png', alt='')
+    li
+      a(href='http://tport.io/', target='_blank', data-content='펜션 실시간 예약연동 시스템을 개발 및 운영하는 회사입니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='티포트 주식회사', data-trigger='hover')
+        img(src='images/member_logo3.png', alt='')
+    li
+      a(href='http://zari.me/', target='_blank', data-content='펜션 객실예약관리 프로그램을 제공하는 업체입니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='자리', data-trigger='hover')
+        img(src='images/member_logo4.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+
+include includes/footer.pug

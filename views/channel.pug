@@ -1,0 +1,63 @@
+include includes/header.pug
+
+.menu-wrapper
+  .container
+    header
+      .logo
+        a(href='/')
+          img(src='/images/logo.png', alt='')
+      .mobile-menu
+        span.line
+      nav
+        ul
+          li
+            a(href='/') HOME
+          li
+            a(href='/member') 회원사
+          li
+            a(href='/map') 전국펜션지도
+          li.active
+            a(href='/channel') 제휴체널
+          li
+            a(href='/contact') CONTACT US
+
+//- page title section
+.page-title
+  .container
+    .row
+      .col-md-7.col-xs-12
+        h1
+          | KOPENZ
+          span.theme-color   CHANNELS
+        img.heading-border(src='/images/branding-border.png', alt='')
+        p
+          | KOPENZ의 펜션을 연동하여 판매하는 회사들 입니다
+
+.container
+  ul.grid.grid-4-columns
+    li
+      a(href='http://www.naver.com/', target='_blank', data-content='포털사이트 네이버 입니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='네이버', data-trigger='hover')
+        img(src='images/channel_logo1.png', alt='')
+    li
+      a(href='http://ticketmonster.co.kr/', target='_blank', data-content='3대 소셜커머스 티켓몬스터 입니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='티켓몬스터', data-trigger='hover')
+        img(src='images/channel_logo2.png', alt='')
+    li
+      a(href='http://www.allstay.kr/', target='_blank', data-content='숙박 최저가 검색 웹사이트 입니다.', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='올스테이', data-trigger='hover')
+        img(src='images/channel_logo3.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+    li
+      a(href='', target='', data-content='', title='', data-placement='top', data-toggle='popover', data-container='body', data-original-title='', data-trigger='')
+        img(src='images/member_logo0.png', alt='')
+
+include includes/footer.pug

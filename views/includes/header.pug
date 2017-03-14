@@ -7,67 +7,33 @@ html
       meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
       meta(name='description', content='')
       meta(name='keywords', content='')
-      title 자리페이지 ZARI Page
-      // ===============    favicon link     ===============
+      title Kopenz - 한국펜션협회
       link(rel='icon', type='image/png', href='/images/favicon.png')
-      // ===============    Bootstrap core CSS     ===============
       link(rel='stylesheet', type='text/css', href='/css/bootstrap.min.css', media='all')
-      // ===============    font-awesome core CSS     ===============
+      link(rel='stylesheet', type='text/css', href='/vendor/animateit/animate.min.css', media='all')
       link(rel='stylesheet', type='text/css', href='/css/font-awesome.min.css', media='all')
-      // ===============    theme core CSS     ===============
       link(rel='stylesheet', type='text/css', href='/css/effect1.css', media='all')
-      // ===============    theme core CSS     ===============
-      link(rel='stylesheet', type='text/css', href='/css/theme.css', media='all')
-      // ===============    responsive core CSS     ===============
+      link(rel='stylesheet', type='text/css', href='/css/theme-elements.css', media='all')
+      link(rel='stylesheet', type='text/css', href='/css/theme-base.css', media='all')
       link(rel='stylesheet', type='text/css', href='/css/responsive.css', media='all')
-      // ===============    spacing core CSS     ===============
       link(rel='stylesheet', type='text/css', href='/css/spacing.min.css', media='all')
-      // ===============    theme content color core CSS     ===============
       link(rel='stylesheet', type='text/css', href='/css/theme-content-color/blue.css', media='all')
-      // ===============    Google fonts CSS     ===============
+      link(rel='stylesheet', type='text/css', href='/vendor/magnific-popup/magnific-popup.css', media='all')
+      link(rel='stylesheet', type='text/css', href='/css/theme.css', media='all')
+      link(rel='stylesheet', type='text/css', href='/css/custom.css', media='all')
+      //- Google fonts CSS
       link(href='https://fonts.googleapis.com/css?family=Roboto:400,300,700,500|Lato:400,300,700,900', rel='stylesheet', type='text/css')
-      link(href='http://fonts.googleapis.com/earlyaccess/jejugothic.css', rel='stylesheet', type='text/css')
-      // HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
+      //- link(href='http://fonts.googleapis.com/earlyaccess/jejugothic.css', rel='stylesheet', type='text/css')
+      //- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries
       <!--[if IE 9]>
         script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
         script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
       <![endif]-->
-    // ===============    Start body markup     ===============
-    // START preloader section
+
+    //- START preloader section
     #ip-container.ip-container
       .ip-header
         .ip-loader
           svg.ip-inner(width='60px', height='60px', viewbox='0 0 80 80')
             path.ip-loader-circlebg(d='M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z')
             path#ip-loader-circle.ip-loader-circle(d='M40,10C57.351,10,71,23.649,71,40.5S57.351,71,40.5,71 S10,57.351,10,40.5S23.649,10,40.5,10z')
-      .menu-wrapper
-        .container
-          header
-            .logo
-              a(href='index.php')
-                img(src='/images/logo.png', alt='')
-            .mobile-menu
-              span.line
-            nav
-              ul
-                li.active
-                  a(href='index.php') 홈
-                //
-                  <li><a href="#">숙소카테고리</a>
-                  <ul>
-                  <li><a href="#">펜션</a></li>
-                  <li><a href="#">게스트하우스</a></li>
-                  <li><a href="#">캠핑</a></li>
-                  <li><a href="#">호스텔</a></li>
-                  <li><a href="#">리조트</a></li>
-                  <li><a href="#">호텔/레지던스</a></li>
-                  </ul>
-                  </li>
-                //
-                  <li><a href="http://zari.me/?lang=ko" target="_blank">예약관리플랫폼</a></li>
-                li
-                  a(href='map.php') 가평북면 펜션지도
-                li
-                  a(href='about.php') 협회소개
-                li
-                  a(href='contact.php') 연락처

@@ -1,0 +1,7 @@
+.atom-work-item>a>img {
+    /*max-width: 109%;*/
+    min-width: 100%;
+}
+.menu-wrapper header .logo {
+    margin-left: 4px;
+}
